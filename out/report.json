@@ -1,0 +1,171 @@
+{
+  "input": "",
+  "demo": true,
+  "raw_points": 38420,
+  "kept_points": 38160,
+  "removed_outliers": 260,
+  "injected_outliers": 280,
+  "outlier_recall": 0.9285714285714286,
+  "outlier_threshold": 0.05255168625573242,
+  "point_spacing": 0.013137921563933105,
+  "orientation": {
+    "Flips": 20674,
+    "Components": 1,
+    "Edges": 206125
+  },
+  "grid": {
+    "cell": 0.024962050971472898,
+    "fit_radius": 0.0723899478172714,
+    "nx": 146,
+    "ny": 110,
+    "nz": 24,
+    "trim_radius": 0.031202563714341124,
+    "valid_corners": 78000
+  },
+  "mesh": {
+    "area": 9.32173767219053,
+    "boundary_edges": 2209,
+    "components": 1,
+    "largest_component_fraction": 1,
+    "triangles": 128185,
+    "vertices": 65186
+  },
+  "geometry": {
+    "count": 54683,
+    "mae": 0.001758167670942507,
+    "rmse": 0.0022160508775372913,
+    "p50": 0.0014645686924390849,
+    "p95": 0.0043691273463527715,
+    "max": 0.009918513351946968,
+    "mean": 0.000045188906071569304,
+    "signed_mean": 0.000045188906071569304
+  },
+  "curvature": {
+    "count": 53252,
+    "mae": 0.077057795184028,
+    "rmse": 0.09739202916943814,
+    "p50": 0.06471500877120297,
+    "p95": 0.19134252062875348,
+    "max": 0.477848134981929,
+    "mean": 0.00038670562548306854
+  },
+  "holes": [
+    {
+      "index": 0,
+      "radius": 0.285,
+      "centroid_hits": 596,
+      "core_triangle_hits": 0,
+      "deepest_inset": 0.06332562469299549,
+      "open_core": true
+    },
+    {
+      "index": 1,
+      "radius": 0.225,
+      "centroid_hits": 420,
+      "core_triangle_hits": 0,
+      "deepest_inset": 0.02854493575162123,
+      "open_core": true
+    },
+    {
+      "index": 2,
+      "radius": 0.165,
+      "centroid_hits": 300,
+      "core_triangle_hits": 0,
+      "deepest_inset": 0.029368709117842368,
+      "open_core": true
+    }
+  ],
+  "checks": [
+    {
+      "name": "outlier_recall [PASS]",
+      "pass": true,
+      "value": 0.9285714285714286,
+      "limit": "\u003e=0.90",
+      "detail": "260/280 injected outliers rejected"
+    },
+    {
+      "name": "surface_points_preserved [PASS]",
+      "pass": true,
+      "value": 0,
+      "limit": "\u003c=20 false removals",
+      "detail": "robust threshold protects one-sided hole boundaries"
+    },
+    {
+      "name": "normals_oriented [PASS]",
+      "pass": true,
+      "value": {
+        "Flips": 20674,
+        "Components": 1,
+        "Edges": 206125
+      },
+      "limit": "flips\u003e1000",
+      "detail": "MST propagates one sign across the shell"
+    },
+    {
+      "name": "dense_mesh [PASS]",
+      "pass": true,
+      "value": 128185,
+      "limit": "\u003e=10000",
+      "detail": "implicit zero set extraction"
+    },
+    {
+      "name": "one_main_component [PASS]",
+      "pass": true,
+      "value": 1,
+      "limit": "\u003e=0.98",
+      "detail": "1 components after small-island cleanup"
+    },
+    {
+      "name": "open_boundaries [PASS]",
+      "pass": true,
+      "value": 2209,
+      "limit": "\u003e=250",
+      "detail": "outer patch and hole rims remain open"
+    },
+    {
+      "name": "body_rmse [PASS]",
+      "pass": true,
+      "value": 0.0022160508775372913,
+      "limit": "\u003c0.008 world units",
+      "detail": "normal-distance error against analytic shell"
+    },
+    {
+      "name": "no_systematic_swelling [PASS]",
+      "pass": true,
+      "value": 0.000045188906071569304,
+      "limit": "|mean signed|\u003c0.004",
+      "detail": "near-zero bias rules out oil-film dilation"
+    },
+    {
+      "name": "hole_cores_not_bridged [PASS]",
+      "pass": true,
+      "value": 0,
+      "limit": "0 core triangles",
+      "detail": "compact support + centroid density trim"
+    },
+    {
+      "name": "hole_edge_band_limited [PASS]",
+      "pass": true,
+      "value": 0.06332562469299549,
+      "limit": "\u003c0.070",
+      "detail": "only a resolution-scale rim band may be trimmed inward"
+    },
+    {
+      "name": "curvature_error_controlled [PASS]",
+      "pass": true,
+      "value": 0.09739202916943814,
+      "limit": "\u003c0.20 1/world unit",
+      "detail": "interior mean-curvature error at analysis scale"
+    }
+  ],
+  "outputs": {
+    "contact_sheet": "out/panel.png",
+    "curvature_error": "out/04_curvature_error.png",
+    "hole_closeup": "out/diagnostics/hole_boundary_closeup.png",
+    "input_points": "out/01_input_points.png",
+    "mesh": "out/03_reconstructed_mesh.png",
+    "normal_color": "out/02_normal_color.png",
+    "raw_normals_diagnostic": "out/diagnostics/raw_inconsistent_normals.png"
+  },
+  "elapsed_ms": 4703
+}

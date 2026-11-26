@@ -1,0 +1,125 @@
+{
+  "canvas": [
+    1600,
+    1000
+  ],
+  "blend_modes": [
+    "normal",
+    "multiply",
+    "screen"
+  ],
+  "clip_stack": [
+    "frame",
+    "group mask (circles union text)"
+  ],
+  "order_variants": [
+    "linear \u003e radial \u003e alpha mask",
+    "linear \u003e alpha mask \u003e radial"
+  ],
+  "checks": {
+    "premultiplied_linear": true,
+    "dither": "bayer8+ign",
+    "raw_band_runs_per_row": 29,
+    "dithered_band_runs": 0,
+    "tile_boundary_delta": 0,
+    "seam_residual_lsb": 1
+  },
+  "files": [
+    {
+      "path": "layers/00_background.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 706179
+    },
+    {
+      "path": "layers/01_group_mask.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 12186
+    },
+    {
+      "path": "layers/02_linear_group.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 360274
+    },
+    {
+      "path": "layers/03_radial_group.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 416792
+    },
+    {
+      "path": "layers/04_alpha_mask.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 13286
+    },
+    {
+      "path": "layers/05_premask_stack.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 400653
+    },
+    {
+      "path": "layers/06_final_normal.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 855603
+    },
+    {
+      "path": "final_normal.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 855603
+    },
+    {
+      "path": "final_multiply.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 844308
+    },
+    {
+      "path": "final_screen.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 846039
+    },
+    {
+      "path": "final.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 855603
+    },
+    {
+      "path": "layer_sheet.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 663590
+    },
+    {
+      "path": "blend_modes.png",
+      "width": 1600,
+      "height": 620,
+      "bytes": 411460
+    },
+    {
+      "path": "order_compare.png",
+      "width": 1600,
+      "height": 900,
+      "bytes": 619932
+    },
+    {
+      "path": "banding_detection.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 371144
+    },
+    {
+      "path": "seamless_tile.png",
+      "width": 960,
+      "height": 200,
+      "bytes": 189809
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+Hole filling report
+alpha_wrap=true alpha=0.580 refine_levels=2 strength=0.550
+mesh_vertices=17522 mesh_triangles=34514 remaining_boundary_edges=528 shell_manifold=true
+
+loop=0 class=outer-contour area=126.003 aspect=1.56 convexity=1.00 selfGap=0.194 pairGap=+Inf outerGap=+Inf reflex=0 pair=0 reason=largest projected boundary loop; retained as open scan contour
+loop=1 class=l-notch area=2.365 aspect=1.49 convexity=0.72 selfGap=0.194 pairGap=1.050 outerGap=3.462 reflex=1 pair=0 reason=low hull convexity with reflex orthogonal corner
+loop=2 class=close-boundary-hole area=0.873 aspect=1.01 convexity=0.93 selfGap=0.194 pairGap=0.350 outerGap=3.850 reflex=12 pair=1 reason=distinct hole loops separated by a thin bridge
+loop=3 class=close-boundary-hole area=0.829 aspect=1.06 convexity=0.94 selfGap=0.194 pairGap=0.350 outerGap=2.538 reflex=10 pair=1 reason=distinct hole loops separated by a thin bridge
+loop=4 class=narrow-slit area=0.850 aspect=7.06 convexity=1.00 selfGap=0.194 pairGap=1.050 outerGap=1.225 reflex=0 pair=0 reason=high PCA aspect ratio with close non-adjacent sides
+loop=5 class=ordinary-hole area=0.584 aspect=1.03 convexity=0.91 selfGap=0.087 pairGap=2.294 outerGap=1.385 reflex=10 pair=0 reason=compact convex interior boundary
+loop=6 class=close-boundary-hole area=0.333 aspect=1.00 convexity=0.95 selfGap=0.194 pairGap=3.428 outerGap=0.173 reflex=4 pair=2 reason=hole boundary lies close to outer contour
+
+patch loop=1 class=l-notch triangles=828 new_vertices=368 wrapped=true
+patch loop=2 class=close-boundary-hole triangles=414 new_vertices=184 wrapped=true
+patch loop=3 class=close-boundary-hole triangles=396 new_vertices=176 wrapped=true
+patch loop=4 class=narrow-slit triangles=558 new_vertices=248 wrapped=true
+patch loop=5 class=ordinary-hole triangles=342 new_vertices=152 wrapped=true
+patch loop=6 class=close-boundary-hole triangles=234 new_vertices=104 wrapped=true

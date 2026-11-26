@@ -1,0 +1,53 @@
+MESH DIAGNOSTICS REPORT
+generated: 2026-11-27T06:26:23+08:00
+input: procedural organic sample
+crease_threshold_deg: 40.00
+collapse_threshold_deg: 18.00
+smoothing: true
+
+[source triangle mesh]
+vertices: 2562
+triangles: 5120
+feature_edges: 111 (boundary=0 crease=111 nonmanifold=0)
+
+[quad mesh]
+vertices: 15362
+quads: 15360
+edges: 30720
+feature_segments: 222
+feature_original_length: 12.770074809
+feature_quad_length: 12.770074809
+feature_length_ratio: 1.000000
+
+[quad curvature bands]
+mean_abs_curvature=4.850897 p95=15.151695 max=30.077313
+quantile_band_0_threshold: 2.554929
+quantile_band_1_threshold: 3.264158
+quantile_band_2_threshold: 4.111628
+quantile_band_3_threshold: 5.452693
+
+[edge length diagnostic]
+quad edges: min=0.010106 p5=0.018868 median=0.030626 p95=0.050410 max=0.183440 mean=0.033481 cv=0.3823
+triangle edges: min=0.037662 p5=0.062170 median=0.084145 p95=0.105179 max=0.366880 mean=0.084878 cv=0.2647
+
+[quad angle collapse]
+collapsed_quads: 22 / 15360 (0.143%)
+worst_face: 3326
+worst_min_angle_deg: 13.7090
+worst_max_angle_deg: 154.4466
+worst_convex: true
+corner_angle_min=13.7090 p5=49.3525 median=89.9175 p95=130.9496 max=161.4716
+
+[outputs]
+out/source_mesh.obj
+out/quad_mesh.obj
+out/original.png
+out/quad_mesh.png
+out/curvature_bands.png
+out/local_zoom.png
+out/edge_length_histogram.png
+out/edge_lengths.csv
+out/quad_face_metrics.csv
+out/feature_edges.csv
+out/edge_length_histogram.csv
+elapsed: 515ms

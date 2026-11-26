@@ -1,0 +1,472 @@
+{
+  "schema": "tsdf-lab/v1",
+  "generated_at": "2026-11-26T21:48:56Z",
+  "go_version": "go1.27.4",
+  "options": {
+    "OutDir": "out",
+    "DepthWidth": 256,
+    "DepthHeight": 192,
+    "VoxelSize": 0.015
+  },
+  "pass": true,
+  "scenes": [
+    {
+      "id": "thin_sheet",
+      "title": "Thin sheet",
+      "view_count": 8,
+      "hole_pixels": 2476,
+      "voxel_count": 2605680,
+      "voxel_size_m": 0.015,
+      "truncation_m": 0.0375,
+      "updated_voxel_updates": 233247,
+      "max_weight": 4.5930576,
+      "threshold_cells": 18231,
+      "mesh_vertices": 57264,
+      "mesh_triangles": 112638,
+      "raw_cloud_distance": {
+        "count": 17599,
+        "mean_m": 0.005013967976651413,
+        "rmse_m": 0.006223213435781094,
+        "median_m": 0.004346132111950486,
+        "p95_m": 0.012113670375087255,
+        "max_m": 0.023338458522920123
+      },
+      "slice_contour_distance": {
+        "count": 1119,
+        "mean_m": 0.0038906405266129094,
+        "rmse_m": 0.005140060689472854,
+        "median_m": 0.00337224319577209,
+        "p95_m": 0.009239693880081175,
+        "max_m": 0.032500000000000084
+      },
+      "mesh_vertex_distance": {
+        "count": 57264,
+        "mean_m": 0.0036830853282082245,
+        "rmse_m": 0.004997315707012311,
+        "median_m": 0.0030745790153741005,
+        "p95_m": 0.009746662914753006,
+        "max_m": 0.0390867536401651
+      },
+      "coverage": {
+        "samples": 4395,
+        "covered": 4395,
+        "coverage_ratio": 1,
+        "search_radius_m": 0.03375
+      },
+      "thin": {
+        "sample_x": [
+          -0.5025000000000002,
+          -0.2625000000000002,
+          -0.007500000000000062,
+          0.24749999999999983,
+          0.4874999999999998
+        ],
+        "thickness_values_m": [
+          0.04764221236109729,
+          0.04965767964720723,
+          0.048081240355968426,
+          0.04568961471319192,
+          0.057635880410671206
+        ],
+        "mean_thickness_m": 0.049741325497627206,
+        "thickness_error_m": 0.004741325497627208,
+        "expected_thickness_m": 0.045
+      },
+      "coarse_control": {
+        "voxel_size_m": 0.05,
+        "truncation_m": 0.1,
+        "slice_contour_distance": {
+          "count": 270,
+          "mean_m": 0.045698451548901245,
+          "rmse_m": 0.04893713569538114,
+          "median_m": 0.050115925967693396,
+          "p95_m": 0.06892817556858083,
+          "max_m": 0.10842945120558382
+        },
+        "thin": {
+          "sample_x": [
+            -0.525,
+            -0.27500000000000013
+          ],
+          "thickness_values_m": [
+            0.13194038569927227,
+            0.15963350608944907
+          ],
+          "mean_thickness_m": 0.14578694589436067,
+          "thickness_error_m": 0.10078694589436067,
+          "expected_thickness_m": 0.045
+        }
+      },
+      "checks": [
+        {
+          "id": "fine_voxel",
+          "label": "voxel size stays fine",
+          "pass": true,
+          "value": 0.015,
+          "threshold": 0.025,
+          "unit": "m"
+        },
+        {
+          "id": "contour_rmse",
+          "label": "slice contour RMSE",
+          "pass": true,
+          "value": 0.005140060689472854,
+          "threshold": 0.018,
+          "unit": "m"
+        },
+        {
+          "id": "mesh_rmse",
+          "label": "mesh vertex RMSE",
+          "pass": true,
+          "value": 0.004997315707012311,
+          "threshold": 0.02,
+          "unit": "m"
+        },
+        {
+          "id": "coverage",
+          "label": "ground-truth surface coverage",
+          "pass": true,
+          "value": 1,
+          "threshold": 0.9,
+          "unit": "ratio"
+        },
+        {
+          "id": "fusion_beats_cloud",
+          "label": "TSDF contour RMSE lower than raw cloud",
+          "pass": true,
+          "value": 0.006223213435781094,
+          "threshold": 0.00565406675842014,
+          "unit": "m"
+        },
+        {
+          "id": "thin_thickness",
+          "label": "thin sheet thickness preserved",
+          "pass": true,
+          "value": 0.004741325497627208,
+          "threshold": 0.014,
+          "unit": "m"
+        },
+        {
+          "id": "fine_beats_coarse",
+          "label": "15mm contour beats 50mm smoothing control",
+          "pass": true,
+          "value": 0.005140060689472854,
+          "threshold": 0.04893713569538114,
+          "unit": "m"
+        }
+      ],
+      "outputs": {
+        "coarse_section": "out/section/thin_sheet__coarse_control_section.png",
+        "depth_mosaic": "out/depth/thin_sheet__raw_depth_mosaic.png",
+        "error_heatmap": "out/heatmap/thin_sheet__error_heatmap.png",
+        "raw_cloud": "out/cloud/thin_sheet__raw_cloud_layers.png",
+        "raw_cloud_ply": "out/points/thin_sheet__raw_cloud.ply",
+        "surface_error_png": "out/surface/thin_sheet__surface_error.png",
+        "surface_ply": "out/mesh/thin_sheet__surface.ply",
+        "surface_png": "out/surface/thin_sheet__surface.png",
+        "threshold_ply": "out/points/thin_sheet__threshold_cells.ply",
+        "voxel_section": "out/section/thin_sheet__voxel_section.png"
+      }
+    },
+    {
+      "id": "concave_corner",
+      "title": "Concave corner",
+      "view_count": 8,
+      "hole_pixels": 3400,
+      "voxel_count": 2605680,
+      "voxel_size_m": 0.015,
+      "truncation_m": 0.0375,
+      "updated_voxel_updates": 290926,
+      "max_weight": 3.6949854,
+      "threshold_cells": 39755,
+      "mesh_vertices": 101461,
+      "mesh_triangles": 197310,
+      "raw_cloud_distance": {
+        "count": 25904,
+        "mean_m": 0.005397922552655828,
+        "rmse_m": 0.006607512650146358,
+        "median_m": 0.004784190809722949,
+        "p95_m": 0.012484643975366692,
+        "max_m": 0.025427333424036525
+      },
+      "slice_contour_distance": {
+        "count": 1827,
+        "mean_m": 0.002807896592003105,
+        "rmse_m": 0.0037671642405043976,
+        "median_m": 0.002223478853702665,
+        "p95_m": 0.007549167310819104,
+        "max_m": 0.01632046010345234
+      },
+      "mesh_vertex_distance": {
+        "count": 101461,
+        "mean_m": 0.003251611099847461,
+        "rmse_m": 0.004454337751013995,
+        "median_m": 0.002499999999999891,
+        "p95_m": 0.008865041583776379,
+        "max_m": 0.037500114609748454
+      },
+      "coverage": {
+        "samples": 6480,
+        "covered": 6480,
+        "coverage_ratio": 1,
+        "search_radius_m": 0.03375
+      },
+      "corner": {
+        "expected": {
+          "x": -0.39,
+          "y": 0.42,
+          "z": 0.56
+        },
+        "estimated": {
+          "x": -0.38956803477990454,
+          "y": 0.4193143957646884,
+          "z": 0.56
+        },
+        "error_m": 0.0008103376573067244,
+        "empty_probe": {
+          "x": -0.363,
+          "y": 0.393,
+          "z": 0.56
+        },
+        "probe_metric_sdf_m": 0.017057223245501518,
+        "probe_tsdf": 0.45485928654670715
+      },
+      "coarse_control": {
+        "voxel_size_m": 0.05,
+        "truncation_m": 0.1,
+        "slice_contour_distance": {
+          "count": 537,
+          "mean_m": 0.00853196844579335,
+          "rmse_m": 0.011107188198031383,
+          "median_m": 0.005885040163993827,
+          "p95_m": 0.02063922457396989,
+          "max_m": 0.04504271507263208
+        },
+        "corner": {
+          "expected": {
+            "x": -0.39,
+            "y": 0.42,
+            "z": 0.56
+          },
+          "estimated": {
+            "x": -0.38808085342597776,
+            "y": 0.42139729583293806,
+            "z": 0.56
+          },
+          "error_m": 0.002373933279881191,
+          "empty_probe": {
+            "x": -0.363,
+            "y": 0.393,
+            "z": 0.56
+          },
+          "probe_metric_sdf_m": -0.009958586841821672,
+          "probe_tsdf": -0.0995858684182167
+        }
+      },
+      "checks": [
+        {
+          "id": "fine_voxel",
+          "label": "voxel size stays fine",
+          "pass": true,
+          "value": 0.015,
+          "threshold": 0.025,
+          "unit": "m"
+        },
+        {
+          "id": "contour_rmse",
+          "label": "slice contour RMSE",
+          "pass": true,
+          "value": 0.0037671642405043976,
+          "threshold": 0.018,
+          "unit": "m"
+        },
+        {
+          "id": "mesh_rmse",
+          "label": "mesh vertex RMSE",
+          "pass": true,
+          "value": 0.004454337751013995,
+          "threshold": 0.02,
+          "unit": "m"
+        },
+        {
+          "id": "coverage",
+          "label": "ground-truth surface coverage",
+          "pass": true,
+          "value": 1,
+          "threshold": 0.9,
+          "unit": "ratio"
+        },
+        {
+          "id": "fusion_beats_cloud",
+          "label": "TSDF contour RMSE lower than raw cloud",
+          "pass": true,
+          "value": 0.006607512650146358,
+          "threshold": 0.004143880664554837,
+          "unit": "m"
+        },
+        {
+          "id": "corner_position",
+          "label": "concave corner position preserved",
+          "pass": true,
+          "value": 0.0008103376573067244,
+          "threshold": 0.026,
+          "unit": "m"
+        },
+        {
+          "id": "empty_bisector",
+          "label": "concave bisector is not filled",
+          "pass": true,
+          "value": 0.017057223245501518,
+          "threshold": 0.008,
+          "unit": "m"
+        },
+        {
+          "id": "fine_beats_coarse",
+          "label": "15mm contour beats 50mm smoothing control",
+          "pass": true,
+          "value": 0.0037671642405043976,
+          "threshold": 0.011107188198031383,
+          "unit": "m"
+        }
+      ],
+      "outputs": {
+        "coarse_section": "out/section/concave_corner__coarse_control_section.png",
+        "depth_mosaic": "out/depth/concave_corner__raw_depth_mosaic.png",
+        "error_heatmap": "out/heatmap/concave_corner__error_heatmap.png",
+        "raw_cloud": "out/cloud/concave_corner__raw_cloud_layers.png",
+        "raw_cloud_ply": "out/points/concave_corner__raw_cloud.ply",
+        "surface_error_png": "out/surface/concave_corner__surface_error.png",
+        "surface_ply": "out/mesh/concave_corner__surface.ply",
+        "surface_png": "out/surface/concave_corner__surface.png",
+        "threshold_ply": "out/points/concave_corner__threshold_cells.ply",
+        "voxel_section": "out/section/concave_corner__voxel_section.png"
+      }
+    },
+    {
+      "id": "wide_baseline",
+      "title": "Wide baseline",
+      "view_count": 6,
+      "hole_pixels": 2230,
+      "voxel_count": 2605680,
+      "voxel_size_m": 0.015,
+      "truncation_m": 0.0375,
+      "updated_voxel_updates": 238590,
+      "max_weight": 2.3788261,
+      "threshold_cells": 42740,
+      "mesh_vertices": 124452,
+      "mesh_triangles": 239908,
+      "raw_cloud_distance": {
+        "count": 14669,
+        "mean_m": 0.005057800079164826,
+        "rmse_m": 0.006225933025667811,
+        "median_m": 0.004485697314061177,
+        "p95_m": 0.01174635549081856,
+        "max_m": 0.025561229271210323
+      },
+      "slice_contour_distance": {
+        "count": 2487,
+        "mean_m": 0.0036472577964040847,
+        "rmse_m": 0.004850500278345778,
+        "median_m": 0.002500000000000141,
+        "p95_m": 0.010524456664920011,
+        "max_m": 0.0167861112952232
+      },
+      "mesh_vertex_distance": {
+        "count": 124452,
+        "mean_m": 0.0038048696628046595,
+        "rmse_m": 0.005279933710646537,
+        "median_m": 0.0025000000000001132,
+        "p95_m": 0.010188060179352783,
+        "max_m": 0.04750000000000007
+      },
+      "coverage": {
+        "samples": 3653,
+        "covered": 3653,
+        "coverage_ratio": 1,
+        "search_radius_m": 0.03375
+      },
+      "coarse_control": {
+        "voxel_size_m": 0.05,
+        "truncation_m": 0.1,
+        "slice_contour_distance": {
+          "count": 708,
+          "mean_m": 0.009344648711006662,
+          "rmse_m": 0.014527840765288055,
+          "median_m": 0.005106552392244473,
+          "p95_m": 0.03145778278261427,
+          "max_m": 0.0651439291238787
+        }
+      },
+      "checks": [
+        {
+          "id": "fine_voxel",
+          "label": "voxel size stays fine",
+          "pass": true,
+          "value": 0.015,
+          "threshold": 0.025,
+          "unit": "m"
+        },
+        {
+          "id": "contour_rmse",
+          "label": "slice contour RMSE",
+          "pass": true,
+          "value": 0.004850500278345778,
+          "threshold": 0.018,
+          "unit": "m"
+        },
+        {
+          "id": "mesh_rmse",
+          "label": "mesh vertex RMSE",
+          "pass": true,
+          "value": 0.005279933710646537,
+          "threshold": 0.02,
+          "unit": "m"
+        },
+        {
+          "id": "coverage",
+          "label": "ground-truth surface coverage",
+          "pass": true,
+          "value": 1,
+          "threshold": 0.9,
+          "unit": "ratio"
+        },
+        {
+          "id": "fusion_beats_cloud",
+          "label": "TSDF contour RMSE lower than raw cloud",
+          "pass": true,
+          "value": 0.006225933025667811,
+          "threshold": 0.005335550306180356,
+          "unit": "m"
+        },
+        {
+          "id": "wide_p95",
+          "label": "wide-baseline p95 error bounded",
+          "pass": true,
+          "value": 0.010524456664920011,
+          "threshold": 0.038,
+          "unit": "m"
+        },
+        {
+          "id": "fine_beats_coarse",
+          "label": "15mm contour beats 50mm smoothing control",
+          "pass": true,
+          "value": 0.004850500278345778,
+          "threshold": 0.014527840765288055,
+          "unit": "m"
+        }
+      ],
+      "outputs": {
+        "coarse_section": "out/section/wide_baseline__coarse_control_section.png",
+        "depth_mosaic": "out/depth/wide_baseline__raw_depth_mosaic.png",
+        "error_heatmap": "out/heatmap/wide_baseline__error_heatmap.png",
+        "raw_cloud": "out/cloud/wide_baseline__raw_cloud_layers.png",
+        "raw_cloud_ply": "out/points/wide_baseline__raw_cloud.ply",
+        "surface_error_png": "out/surface/wide_baseline__surface_error.png",
+        "surface_ply": "out/mesh/wide_baseline__surface.ply",
+        "surface_png": "out/surface/wide_baseline__surface.png",
+        "threshold_ply": "out/points/wide_baseline__threshold_cells.ply",
+        "voxel_section": "out/section/wide_baseline__voxel_section.png"
+      }
+    }
+  ]
+}

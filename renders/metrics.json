@@ -1,0 +1,50 @@
+{
+  "program": "velvet-sheen-go",
+  "width": 960,
+  "height": 800,
+  "antialiasing": 2,
+  "exposure": 3.15,
+  "views": {
+    "backlit": {
+      "width": 960,
+      "height": 800,
+      "coverage": 0.62489453125,
+      "mean_cloth_linear": 0.031444595215035294,
+      "mean_edge_linear": 0.13379962521375344,
+      "mean_interior_linear": 0.01280980955446024,
+      "edge_interior_ratio": 10.445090900447136,
+      "max_linear": 0.7000000000000001,
+      "over_one_fraction": 0
+    },
+    "front": {
+      "width": 960,
+      "height": 800,
+      "coverage": 0.62489453125,
+      "mean_cloth_linear": 0.01780653362975747,
+      "mean_edge_linear": 0.01298030803776833,
+      "mean_interior_linear": 0.01891267674078651,
+      "edge_interior_ratio": 0.6863284460298202,
+      "max_linear": 0.07927109599840546,
+      "over_one_fraction": 0
+    },
+    "rotation": {
+      "width": 960,
+      "height": 800,
+      "coverage": 0.62489453125,
+      "mean_cloth_linear": 0.015865245869532356,
+      "mean_edge_linear": 0.011890053235840208,
+      "mean_interior_linear": 0.01657963510372978,
+      "edge_interior_ratio": 0.7171480651685394,
+      "max_linear": 0.2502002522766807,
+      "over_one_fraction": 0
+    }
+  },
+  "backlit_to_front_energy_ratio": 1.7659021047469066,
+  "fiber_rotation": {
+    "mean_ratio": 0.891172597077412,
+    "mean_abs_delta_linear": 0.014050939835184748,
+    "max_view_mean_ratio": 1.122117088518527,
+    "shared_coverage": 479807
+  },
+  "output_directory": "renders"
+}

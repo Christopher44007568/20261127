@@ -1,0 +1,338 @@
+{
+  "zero_dependencies": true,
+  "all_pass": true,
+  "tolerance": 0.025,
+  "materials": [
+    {
+      "kind": "rough_metal",
+      "name": "粗糙金属",
+      "tolerance": 0.025,
+      "bins": 96,
+      "lut_samples": 16384,
+      "test_samples": 24576,
+      "pass": true,
+      "worst_ndot_v": 0.02,
+      "worst_error": 0.00019895575899053775,
+      "raw_worst_error": 0.15401260003991213,
+      "mis_worst_error": 0.001363363775916171,
+      "mis_pass": true,
+      "points": [
+        {
+          "ndot_v": 1,
+          "raw_energy": 0.9291502730300606,
+          "corrected_energy": 0.9999999921869647,
+          "abs_error": 7.813035329817808e-9,
+          "raw_abs_error": 0.07084972696993941,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.92,
+          "raw_energy": 0.9231926917155207,
+          "corrected_energy": 0.9999985874156029,
+          "abs_error": 0.00000141258439712022,
+          "raw_abs_error": 0.07680730828447935,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.78,
+          "raw_energy": 0.9100732628926743,
+          "corrected_energy": 1.000002280834481,
+          "abs_error": 0.000002280834481060978,
+          "raw_abs_error": 0.08992673710732568,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.6,
+          "raw_energy": 0.8871877334262628,
+          "corrected_energy": 0.9999994484027276,
+          "abs_error": 5.515972724134954e-7,
+          "raw_abs_error": 0.11281226657373722,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.42,
+          "raw_energy": 0.8595717223409886,
+          "corrected_energy": 0.99999665957692,
+          "abs_error": 0.000003340423080033794,
+          "raw_abs_error": 0.14042827765901145,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.26,
+          "raw_energy": 0.8459873999600879,
+          "corrected_energy": 0.999968293918919,
+          "abs_error": 0.000031706081081050996,
+          "raw_abs_error": 0.15401260003991213,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.14,
+          "raw_energy": 0.8702065675436857,
+          "corrected_energy": 0.9999759029956584,
+          "abs_error": 0.00002409700434158335,
+          "raw_abs_error": 0.12979343245631425,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.07,
+          "raw_energy": 0.9145096646526993,
+          "corrected_energy": 0.9999142978855522,
+          "abs_error": 0.0000857021144478054,
+          "raw_abs_error": 0.08549033534730066,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.035,
+          "raw_energy": 0.9493195204924874,
+          "corrected_energy": 0.9999331671035031,
+          "abs_error": 0.00006683289649689339,
+          "raw_abs_error": 0.050680479507512644,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.02,
+          "raw_energy": 0.9679033319872246,
+          "corrected_energy": 0.9998010442410095,
+          "abs_error": 0.00019895575899053775,
+          "raw_abs_error": 0.03209666801277544,
+          "pass": true
+        }
+      ],
+      "sphere": {
+        "width": 256,
+        "height": 256,
+        "direction_checks": 3207,
+        "integration_samples": 4096,
+        "min_ndot_v": 0.006000000000003,
+        "worst_ndot_v": 0.014283333333337148,
+        "worst_error": 0.00018803932243460775,
+        "center_error": 0.0000063802992749106835,
+        "rim_error": 0.00018803932243460775,
+        "pass": true
+      }
+    },
+    {
+      "kind": "clearcoat",
+      "name": "清漆",
+      "tolerance": 0.025,
+      "bins": 96,
+      "lut_samples": 16384,
+      "test_samples": 24576,
+      "pass": true,
+      "worst_ndot_v": 0.02,
+      "worst_error": 0.0008500039221251976,
+      "raw_worst_error": 0.6536151237270817,
+      "mis_worst_error": 0.0009323253183580738,
+      "mis_pass": true,
+      "points": [
+        {
+          "ndot_v": 1,
+          "raw_energy": 1.0399734439788335,
+          "corrected_energy": 1.0000003120981202,
+          "abs_error": 3.120981202364703e-7,
+          "raw_abs_error": 0.03997344397883351,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.92,
+          "raw_energy": 1.0399801500903554,
+          "corrected_energy": 1.0000011225846825,
+          "abs_error": 0.0000011225846825446695,
+          "raw_abs_error": 0.03998015009035538,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.78,
+          "raw_energy": 1.0405473846332396,
+          "corrected_energy": 1.0000014571212905,
+          "abs_error": 0.0000014571212905156727,
+          "raw_abs_error": 0.04054738463323959,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.6,
+          "raw_energy": 1.0502307428957578,
+          "corrected_energy": 0.9999939162400185,
+          "abs_error": 0.000006083759981456716,
+          "raw_abs_error": 0.050230742895757796,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.42,
+          "raw_energy": 1.1031564218431775,
+          "corrected_energy": 0.9999834007283082,
+          "abs_error": 0.00001659927169184172,
+          "raw_abs_error": 0.10315642184317753,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.26,
+          "raw_energy": 1.247239342547914,
+          "corrected_energy": 0.9999393781563494,
+          "abs_error": 0.00006062184365063228,
+          "raw_abs_error": 0.24723934254791402,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.14,
+          "raw_energy": 1.4588191100751136,
+          "corrected_energy": 0.9999966798596402,
+          "abs_error": 0.000003320140359752699,
+          "raw_abs_error": 0.45881911007511356,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.07,
+          "raw_energy": 1.601415099209878,
+          "corrected_energy": 1.0002282900866406,
+          "abs_error": 0.00022829008664060346,
+          "raw_abs_error": 0.6014150992098779,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.035,
+          "raw_energy": 1.6389851592591604,
+          "corrected_energy": 1.000018446276914,
+          "abs_error": 0.000018446276913941517,
+          "raw_abs_error": 0.6389851592591604,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.02,
+          "raw_energy": 1.6536151237270817,
+          "corrected_energy": 0.9991499960778748,
+          "abs_error": 0.0008500039221251976,
+          "raw_abs_error": 0.6536151237270817,
+          "pass": true
+        }
+      ],
+      "sphere": {
+        "width": 256,
+        "height": 256,
+        "direction_checks": 3207,
+        "integration_samples": 4096,
+        "min_ndot_v": 0.006000000000003,
+        "worst_ndot_v": 0.014283333333337148,
+        "worst_error": 0.000840217900311524,
+        "center_error": 0.000002253829748388725,
+        "rim_error": 0.000840217900311524,
+        "pass": true
+      }
+    },
+    {
+      "kind": "velvet",
+      "name": "天鹅绒",
+      "tolerance": 0.025,
+      "bins": 96,
+      "lut_samples": 16384,
+      "test_samples": 24576,
+      "pass": true,
+      "worst_ndot_v": 0.92,
+      "worst_error": 0.00007210542243896167,
+      "raw_worst_error": 4.5349244294436195,
+      "mis_worst_error": 0.000014743336077871483,
+      "mis_pass": true,
+      "points": [
+        {
+          "ndot_v": 1,
+          "raw_energy": 1.4306976566325047,
+          "corrected_energy": 1.0000000011089496,
+          "abs_error": 1.1089495988159115e-9,
+          "raw_abs_error": 0.4306976566325047,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.92,
+          "raw_energy": 1.6060240419057976,
+          "corrected_energy": 0.999927894577561,
+          "abs_error": 0.00007210542243896167,
+          "raw_abs_error": 0.6060240419057976,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.78,
+          "raw_energy": 2.0581156707210364,
+          "corrected_energy": 0.9999941475032017,
+          "abs_error": 0.0000058524967982975795,
+          "raw_abs_error": 1.0581156707210364,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.6,
+          "raw_energy": 2.758125650970081,
+          "corrected_energy": 0.9999952715599107,
+          "abs_error": 0.000004728440089252217,
+          "raw_abs_error": 1.758125650970081,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.42,
+          "raw_energy": 3.5448770735294284,
+          "corrected_energy": 0.9999901105398463,
+          "abs_error": 0.000009889460153678087,
+          "raw_abs_error": 2.5448770735294284,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.26,
+          "raw_energy": 4.302937883534774,
+          "corrected_energy": 0.9999856816973328,
+          "abs_error": 0.000014318302667182259,
+          "raw_abs_error": 3.3029378835347742,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.14,
+          "raw_energy": 4.905047788206749,
+          "corrected_energy": 0.9999876728264319,
+          "abs_error": 0.000012327173568138505,
+          "raw_abs_error": 3.9050477882067494,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.07,
+          "raw_energy": 5.269164084416237,
+          "corrected_energy": 0.9999850164162077,
+          "abs_error": 0.000014983583792260724,
+          "raw_abs_error": 4.269164084416237,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.035,
+          "raw_energy": 5.454706144380163,
+          "corrected_energy": 0.9999877358404065,
+          "abs_error": 0.000012264159593544655,
+          "raw_abs_error": 4.454706144380163,
+          "pass": true
+        },
+        {
+          "ndot_v": 0.02,
+          "raw_energy": 5.5349244294436195,
+          "corrected_energy": 0.9999863347215724,
+          "abs_error": 0.000013665278427610339,
+          "raw_abs_error": 4.5349244294436195,
+          "pass": true
+        }
+      ],
+      "sphere": {
+        "width": 256,
+        "height": 256,
+        "direction_checks": 3207,
+        "integration_samples": 4096,
+        "min_ndot_v": 0.006000000000003,
+        "worst_ndot_v": 0.9820820211904665,
+        "worst_error": 0.0002556610741740739,
+        "center_error": 0.0002556610741740739,
+        "rim_error": 0.00008928069475255818,
+        "pass": true
+      }
+    }
+  ],
+  "outputs": {
+    "corrected": "out/corrected_materials.png",
+    "heatmap": "out/energy_heatmap.png",
+    "original": "out/original_materials.png",
+    "report": "out/energy_report.json",
+    "whiteFurnace": "out/white_furnace.png"
+  }
+}

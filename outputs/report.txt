@@ -1,0 +1,39 @@
+Dirty-Rectangle Canvas Report
+canvas: 1280x800 (1024000 pixels), drag steps: 24
+
+pixel-perfect vs full repaint: true (total mismatching pixels: 0)
+average dirty area: 13.71% of canvas; last step: 15.09%
+
+last step dirty rectangles (old bounds + new bounds, merged to 4 disjoint repaint rects):
+  rect[00] x=910 y=335 w=239 h=140 pixels=33460
+  rect[01] x=51 y=431 w=380 h=277 pixels=105260
+  rect[02] x=47 y=111 w=257 h=41 pixels=10537
+  rect[03] x=1077 y=43 w=156 h=34 pixels=5304
+
+raw tracked rectangles: 10
+
+step  status         raw  merged  dirty%   mismatch  result
+   1  DRAG ME!          8       4   14.95         0  IDENTICAL
+   2  MOVING...        10       5   13.06         0  IDENTICAL
+   3  GO!              10       5   13.07         0  IDENTICAL
+   4  CACHE            10       4   17.23         0  IDENTICAL
+   5  A TO B           10       4   14.88         0  IDENTICAL
+   6  HI!              10       4   11.79         0  IDENTICAL
+   7  DIRTY RECT       10       4    9.57         0  IDENTICAL
+   8  X:042            10       4   10.78         0  IDENTICAL
+   9  SHORTER?         10       4   11.09         0  IDENTICAL
+  10  OK               10       4   11.57         0  IDENTICAL
+  11  PIXEL-PERFECT    10       3   20.72         0  IDENTICAL
+  12  DONE!            10       3   17.60         0  IDENTICAL
+  13  DRAG ME!         10       3   13.84         0  IDENTICAL
+  14  MOVING...        10       4   12.42         0  IDENTICAL
+  15  GO!              10       4   13.91         0  IDENTICAL
+  16  CACHE            10       4   14.41         0  IDENTICAL
+  17  A TO B           10       5   12.96         0  IDENTICAL
+  18  HI!              10       5   13.07         0  IDENTICAL
+  19  DIRTY RECT       10       5   13.44         0  IDENTICAL
+  20  X:042            10       5   13.33         0  IDENTICAL
+  21  SHORTER?         10       5   13.01         0  IDENTICAL
+  22  OK               10       5   12.73         0  IDENTICAL
+  23  PIXEL-PERFECT    10       4   14.50         0  IDENTICAL
+  24  DONE!            10       4   15.09         0  IDENTICAL
